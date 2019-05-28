@@ -1,0 +1,44 @@
+{
+  "name": "prospect_react_nodejs_mongodb",
+  "version": "1.0.0",
+  "description": "ecommerce_app",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "test": "node test.js",
+    "start": "node server.js",
+    "server": "nodemon bin/dev",
+    "client": "npm start --prefix ../client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix ../client && npm run build --prefix ../client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Romkin7/prospect_react_nodejs_mongodb"
+  },
+  "keywords": [
+    "NodeJS",
+    "MongoDB",
+    "ExpressJS",
+    "ReactJS",
+    "ReduxJS",
+    "SASS",
+    "Travis"
+  ],
+  "author": "Roman Tuomisto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Romkin7/prospect_react_nodejs_mongodb/issues"
+  },
+  "homepage": "https://github.com/Romkin7/prospect_react_nodejs_mongodb#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.5.8",
+    "morgan": "^1.9.1"
+  }
+}
